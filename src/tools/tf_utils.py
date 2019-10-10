@@ -7,7 +7,7 @@ import os
 from os.path import expanduser
 home = expanduser("~")
 user = home.split('/')[-1]
-sys.path.append(home + '/alaska_github/src/')
+sys.path.append(home + '/alaska/src/')
 from tools.jpeg_utils import *
 import pickle
 

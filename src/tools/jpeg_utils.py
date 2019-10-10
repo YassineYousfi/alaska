@@ -8,7 +8,7 @@ import sys
 from os.path import expanduser
 home = expanduser("~")
 user = home.split('/')[-1]
-sys.path.append(home + '/alaska_github/src/')
+sys.path.append(home + '/alaska/src/')
 import tools.python3_jpeg_toolbox as jpeglib
 
 from numpy.lib.stride_tricks import as_strided
