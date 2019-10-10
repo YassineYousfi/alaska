@@ -39,7 +39,7 @@ with open(local, 'wb') as f:
         if chunk:
             f.write(chunk)
 with zipfile.ZipFile(local, 'r') as zipref:
-    zipref.extractall(home + '/alaska_github/')
+    zipref.extractall(home + '/alaska/')
     
 os.remove(local)
 ```
