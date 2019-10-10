@@ -31,7 +31,7 @@ home = os.path.expanduser("~")
 user = home.split('/')[-1]
 
 url = 'http://dde.binghamton.edu/download/alaska/models.zip'
-local = home + '/alaska_github/models.zip'
+local = home + '/alaska/models.zip'
 
 r = requests.get(url)
 with open(local, 'wb') as f:
@@ -69,5 +69,4 @@ Please consider citing our paper if you find this repository useful.
  publisher = {ACM},
  address = {New York, NY, USA},
 } 
-
 ```
