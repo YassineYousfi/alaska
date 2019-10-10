@@ -1,7 +1,7 @@
 # 🏔 ALASKA
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)]()
-[![Generic badge](https://img.shields.io/badge/Status-Beta-ffa500.svg)]()
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green.svg)](https://github.com/YassineYousfi/alaska/issues)
+[![Generic badge](https://img.shields.io/badge/Status-Beta-ffa500.svg)](https://github.com/YassineYousfi/alaska/pulse)
 
 This repo provides state-of-the-art pre-trained models for steganalysis in the JPEG domain, trained and used to win the [ALASKA steganalaysis challenge](https://alaska.utt.fr/). Details about the architectures can be found in our [paper](http://www.ws.binghamton.edu/fridrich/Research/ALASKA-preprint1.pdf).
 
