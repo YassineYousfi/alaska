@@ -1,0 +1,216 @@
+running build_ext
+building 'jpegObject' extension
+C compiler: x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC
+
+compile options: '-I/home/gibouloq/.local/lib/python3.6/site-packages/numpy/core/include -I/usr/include/python3.6m -c'
+x86_64-linux-gnu-gcc: jpegobject.c
+In file included from /home/gibouloq/.local/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1821:0,
+                 from /home/gibouloq/.local/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18,
+                 from /home/gibouloq/.local/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from jpegobject.c:14:
+/home/gibouloq/.local/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: #warning "Using deprecated NumPy API, disable it by " "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it by " \
+  ^~~~~~~
+jpegobject.c: In function ‘jpegDel’:
+jpegobject.c:90:9: error: ‘jpegObject {aka struct <anonymous>}’ has no member named ‘ob_type’; did you mean ‘ob_base’?
+   self->ob_type->tp_free( (PyObject*) self ) ;
+         ^~~~~~~
+         ob_base
+jpegobject.c: In function ‘jpegSave’:
+jpegobject.c:107:38: warning: implicit declaration of function ‘PyString_AsString’; did you mean ‘PyBytes_AsString’? [-Wimplicit-function-declaration]
+   if ( filename == NULL ) filename = PyString_AsString ( self->filename ) ;
+                                      ^~~~~~~~~~~~~~~~~
+                                      PyBytes_AsString
+jpegobject.c:107:36: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   if ( filename == NULL ) filename = PyString_AsString ( self->filename ) ;
+                                    ^
+jpegobject.c:159:12: warning: implicit declaration of function ‘PyInt_AsLong’; did you mean ‘PyLong_AsLong’? [-Wimplicit-function-declaration]
+        L = PyInt_AsLong ( PyDict_GetItemString ( D, "component_id" ) ) ;
+            ^~~~~~~~~~~~
+            PyLong_AsLong
+jpegobject.c:204:21: warning: implicit declaration of function ‘jround_up’; did you mean ‘lroundl’? [-Wimplicit-function-declaration]
+        (JDIMENSION) jround_up((long) compptr->width_in_blocks,
+                     ^~~~~~~~~
+                     lroundl
+jpegobject.c:216:9: warning: variable ‘c_height’ set but not used [-Wunused-but-set-variable]
+     int c_height, c_width, i, j ; 
+         ^~~~~~~~
+jpegobject.c:306:12: warning: implicit declaration of function ‘PyString_Size’; did you mean ‘PyMapping_Size’? [-Wimplicit-function-declaration]
+     slen = PyString_Size(D) ;
+            ^~~~~~~~~~~~~
+            PyMapping_Size
+jpegobject.c:307:13: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     comment = PyString_AsString(D) ;
+             ^
+jpegobject.c:310:41: warning: pointer targets in passing argument 3 of ‘jpeg_write_marker’ differ in signedness [-Wpointer-sign]
+     jpeg_write_marker(&cinfo, JPEG_COM, comment, slen );
+                                         ^~~~~~~
+In file included from jpegobject.c:19:0:
+jpeglib/jpeglib.h:949:14: note: expected ‘const JOCTET * {aka const unsigned char *}’ but argument is of type ‘char *’
+ EXTERN(void) jpeg_write_marker
+              ^~~~~~~~~~~~~~~~~
+jpegobject.c: At top level:
+jpegobject.c:573:18: warning: missing braces around initializer [-Wmissing-braces]
+ jpegObjectType = {
+                  ^
+jpegobject.c:576:4: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+    "jpegobject",               /* tp_name */
+    ^~~~~~~~~~~~
+jpegobject.c:576:4: note: (near initialization for ‘jpegObjectType.tp_basicsize’)
+jpegobject.c:579:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    (destructor)jpegDel,     /* tp_dealloc */
+    ^
+jpegobject.c:579:4: note: (near initialization for ‘jpegObjectType.tp_print’)
+In file included from /usr/include/python3.6m/pytime.h:6:0,
+                 from /usr/include/python3.6m/Python.h:68,
+                 from jpegobject.c:12:
+/usr/include/python3.6m/object.h:658:29: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define Py_TPFLAGS_DEFAULT  ( \
+                             ^
+jpegobject.c:587:4: note: in expansion of macro ‘Py_TPFLAGS_DEFAULT’
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, /* tp_flags*/
+    ^~~~~~~~~~~~~~~~~~
+/usr/include/python3.6m/object.h:658:29: note: (near initialization for ‘jpegObjectType.tp_doc’)
+ #define Py_TPFLAGS_DEFAULT  ( \
+                             ^
+jpegobject.c:587:4: note: in expansion of macro ‘Py_TPFLAGS_DEFAULT’
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, /* tp_flags*/
+    ^~~~~~~~~~~~~~~~~~
+jpegobject.c:588:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    "JPEG object to load and save JPEG files and give access to the JPEG "
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+jpegobject.c:588:4: note: (near initialization for ‘jpegObjectType.tp_traverse’)
+jpegobject.c:597:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    jpegObject_methods,         /* tp_methods */
+    ^~~~~~~~~~~~~~~~~~
+jpegobject.c:597:4: note: (near initialization for ‘jpegObjectType.tp_members’)
+jpegobject.c:598:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    jpegObject_members,         /* tp_members */
+    ^~~~~~~~~~~~~~~~~~
+jpegobject.c:598:4: note: (near initialization for ‘jpegObjectType.tp_getset’)
+jpegobject.c:602:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    (initproc)jpegInit,  /* tp_init */
+    ^
+jpegobject.c:602:4: note: (near initialization for ‘jpegObjectType.tp_alloc’)
+jpegobject.c:573:18: warning: missing braces around initializer [-Wmissing-braces]
+ jpegObjectType = {
+                  ^
+jpegobject.c: In function ‘initjpegObject’:
+jpegobject.c:609:3: warning: ‘return’ with a value, in function returning void
+   import_array() ;
+   ^~~~~~~~~~~~
+jpegobject.c:606:6: note: declared here
+ void initjpegObject(void)
+      ^~~~~~~~~~~~~~
+jpegobject.c:610:9: warning: implicit declaration of function ‘Py_InitModule3’; did you mean ‘Py_Initialize’? [-Wimplicit-function-declaration]
+   mod = Py_InitModule3 ( "jpegObject", NULL, "JPEG Toolbox" ) ;
+         ^~~~~~~~~~~~~~
+         Py_Initialize
+jpegobject.c:610:7: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   mod = Py_InitModule3 ( "jpegObject", NULL, "JPEG Toolbox" ) ;
+       ^
+In file included from /home/gibouloq/.local/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1821:0,
+                 from /home/gibouloq/.local/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18,
+                 from /home/gibouloq/.local/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from jpegobject.c:14:
+/home/gibouloq/.local/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: #warning "Using deprecated NumPy API, disable it by " "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it by " \
+  ^~~~~~~
+jpegobject.c: In function ‘jpegDel’:
+jpegobject.c:90:9: error: ‘jpegObject {aka struct <anonymous>}’ has no member named ‘ob_type’; did you mean ‘ob_base’?
+   self->ob_type->tp_free( (PyObject*) self ) ;
+         ^~~~~~~
+         ob_base
+jpegobject.c: In function ‘jpegSave’:
+jpegobject.c:107:38: warning: implicit declaration of function ‘PyString_AsString’; did you mean ‘PyBytes_AsString’? [-Wimplicit-function-declaration]
+   if ( filename == NULL ) filename = PyString_AsString ( self->filename ) ;
+                                      ^~~~~~~~~~~~~~~~~
+                                      PyBytes_AsString
+jpegobject.c:107:36: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   if ( filename == NULL ) filename = PyString_AsString ( self->filename ) ;
+                                    ^
+jpegobject.c:159:12: warning: implicit declaration of function ‘PyInt_AsLong’; did you mean ‘PyLong_AsLong’? [-Wimplicit-function-declaration]
+        L = PyInt_AsLong ( PyDict_GetItemString ( D, "component_id" ) ) ;
+            ^~~~~~~~~~~~
+            PyLong_AsLong
+jpegobject.c:204:21: warning: implicit declaration of function ‘jround_up’; did you mean ‘lroundl’? [-Wimplicit-function-declaration]
+        (JDIMENSION) jround_up((long) compptr->width_in_blocks,
+                     ^~~~~~~~~
+                     lroundl
+jpegobject.c:216:9: warning: variable ‘c_height’ set but not used [-Wunused-but-set-variable]
+     int c_height, c_width, i, j ; 
+         ^~~~~~~~
+jpegobject.c:306:12: warning: implicit declaration of function ‘PyString_Size’; did you mean ‘PyMapping_Size’? [-Wimplicit-function-declaration]
+     slen = PyString_Size(D) ;
+            ^~~~~~~~~~~~~
+            PyMapping_Size
+jpegobject.c:307:13: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+     comment = PyString_AsString(D) ;
+             ^
+jpegobject.c:310:41: warning: pointer targets in passing argument 3 of ‘jpeg_write_marker’ differ in signedness [-Wpointer-sign]
+     jpeg_write_marker(&cinfo, JPEG_COM, comment, slen );
+                                         ^~~~~~~
+In file included from jpegobject.c:19:0:
+jpeglib/jpeglib.h:949:14: note: expected ‘const JOCTET * {aka const unsigned char *}’ but argument is of type ‘char *’
+ EXTERN(void) jpeg_write_marker
+              ^~~~~~~~~~~~~~~~~
+jpegobject.c: At top level:
+jpegobject.c:573:18: warning: missing braces around initializer [-Wmissing-braces]
+ jpegObjectType = {
+                  ^
+jpegobject.c:576:4: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+    "jpegobject",               /* tp_name */
+    ^~~~~~~~~~~~
+jpegobject.c:576:4: note: (near initialization for ‘jpegObjectType.tp_basicsize’)
+jpegobject.c:579:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    (destructor)jpegDel,     /* tp_dealloc */
+    ^
+jpegobject.c:579:4: note: (near initialization for ‘jpegObjectType.tp_print’)
+In file included from /usr/include/python3.6m/pytime.h:6:0,
+                 from /usr/include/python3.6m/Python.h:68,
+                 from jpegobject.c:12:
+/usr/include/python3.6m/object.h:658:29: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+ #define Py_TPFLAGS_DEFAULT  ( \
+                             ^
+jpegobject.c:587:4: note: in expansion of macro ‘Py_TPFLAGS_DEFAULT’
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, /* tp_flags*/
+    ^~~~~~~~~~~~~~~~~~
+/usr/include/python3.6m/object.h:658:29: note: (near initialization for ‘jpegObjectType.tp_doc’)
+ #define Py_TPFLAGS_DEFAULT  ( \
+                             ^
+jpegobject.c:587:4: note: in expansion of macro ‘Py_TPFLAGS_DEFAULT’
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, /* tp_flags*/
+    ^~~~~~~~~~~~~~~~~~
+jpegobject.c:588:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    "JPEG object to load and save JPEG files and give access to the JPEG "
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+jpegobject.c:588:4: note: (near initialization for ‘jpegObjectType.tp_traverse’)
+jpegobject.c:597:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    jpegObject_methods,         /* tp_methods */
+    ^~~~~~~~~~~~~~~~~~
+jpegobject.c:597:4: note: (near initialization for ‘jpegObjectType.tp_members’)
+jpegobject.c:598:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    jpegObject_members,         /* tp_members */
+    ^~~~~~~~~~~~~~~~~~
+jpegobject.c:598:4: note: (near initialization for ‘jpegObjectType.tp_getset’)
+jpegobject.c:602:4: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+    (initproc)jpegInit,  /* tp_init */
+    ^
+jpegobject.c:602:4: note: (near initialization for ‘jpegObjectType.tp_alloc’)
+jpegobject.c:573:18: warning: missing braces around initializer [-Wmissing-braces]
+ jpegObjectType = {
+                  ^
+jpegobject.c: In function ‘initjpegObject’:
+jpegobject.c:609:3: warning: ‘return’ with a value, in function returning void
+   import_array() ;
+   ^~~~~~~~~~~~
+jpegobject.c:606:6: note: declared here
+ void initjpegObject(void)
+      ^~~~~~~~~~~~~~
+jpegobject.c:610:9: warning: implicit declaration of function ‘Py_InitModule3’; did you mean ‘Py_Initialize’? [-Wimplicit-function-declaration]
+   mod = Py_InitModule3 ( "jpegObject", NULL, "JPEG Toolbox" ) ;
+         ^~~~~~~~~~~~~~
+         Py_Initialize
+jpegobject.c:610:7: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   mod = Py_InitModule3 ( "jpegObject", NULL, "JPEG Toolbox" ) ;
+       ^

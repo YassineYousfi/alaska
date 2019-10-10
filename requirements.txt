@@ -1,0 +1,10 @@
+# progress bars in model download and training scripts
+tqdm
+# Used for downloading models over HTTP
+requests
+# Used for handling zip files
+zipfile
+# tensorflow GPU
+tensorflow-gpu==1.14.0
+# ONNX
+tf2onnx==1.5.3
