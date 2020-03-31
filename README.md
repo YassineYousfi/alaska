@@ -19,6 +19,7 @@ Please note that shared models are only for JPEG quality factor 95. Please open 
 
 Python 3.5+ and dependencies listed in `requirements.txt`.
 A Python3 compatible [jpeg Package](http://www.ifs.schaathun.net/pysteg/pysteg.jpeg.html) is included in the tools folder.
+System requirements: Mac OS, Linux (tested on Ubuntu 18.04)
 
 ## Getting started - Downloading models
 
