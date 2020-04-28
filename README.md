@@ -3,8 +3,10 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green.svg)](https://github.com/YassineYousfi/alaska/issues)
 [![Generic badge](https://img.shields.io/badge/Status-Beta-ffa500.svg)](https://github.com/YassineYousfi/alaska/pulse)
 
-This repo provides state-of-the-art pre-trained models for steganalysis in the JPEG domain, trained and used to win the [ALASKA steganalaysis challenge](http://alaska.utt.fr/alaska1). Details about the architectures can be found in our [paper](http://www.ws.binghamton.edu/fridrich/Research/ALASKA-preprint1.pdf).
+This repo provides state-of-the-art pre-trained models for steganalysis in the JPEG domain, trained and used to win the [ALASKA 1 steganalaysis challenge](https://alaska.utt.fr/#HallOfFame). Details about the architectures can be found in our [paper](http://www.ws.binghamton.edu/fridrich/Research/ALASKA-preprint1.pdf).
 
+## Important Update
+A new Alaska competition is now running on [Kaggle](https://www.kaggle.com/c/alaska2-image-steganalysis/overview), note that the settings are very different from the first edition of the competition: Image sizes, Quality factors, Embedding schemes, and payload. You can still use the pre-trained models provided for download.
 
 ## Features
 
@@ -13,7 +15,7 @@ This repo provides state-of-the-art pre-trained models for steganalysis in the J
 - Notebooks to fine-tune feature extractors and train custom detectors
 - Models are shared within the Tensorflow framework, and converted to [ONNX](https://github.com/onnx/onnx) for use with other deep learning frameworks.
 
-Please note that shared models are only for JPEG quality factor 95. Please open an issue if other quality factors are needed.
+Please note that shared models are only for JPEG quality factor 95.
 
 ## Dependecies
 
@@ -48,7 +50,7 @@ os.remove(local)
 
 ## Getting started - Downloading datasets
 
-This repo comes with minimal image examples, the complete datasets are available [here](https://alaska.utt.fr/alaska1#material) (note that you need to create a free account)
+This repo comes with minimal image examples, the complete datasets used to train these models have been removed from the official Alaska website by the organizers.
 
 ## References
 
