@@ -1,12 +1,13 @@
 # 🏔 ALASKA
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-Yes-green.svg)](https://github.com/YassineYousfi/alaska/issues)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://github.com/YassineYousfi/alaska/issues)
 [![Generic badge](https://img.shields.io/badge/Status-Beta-ffa500.svg)](https://github.com/YassineYousfi/alaska/pulse)
 
 This repo provides state-of-the-art pre-trained models for steganalysis in the JPEG domain, trained and used to win the [ALASKA 1 steganalaysis challenge](https://alaska.utt.fr/#HallOfFame). Details about the architectures can be found in our [paper](http://www.ws.binghamton.edu/fridrich/Research/ALASKA-preprint1.pdf).
 
 ## Important Update
-A new Alaska competition is now running on [Kaggle](https://www.kaggle.com/c/alaska2-image-steganalysis/overview), note that the settings are very different from the first edition of the competition: Image sizes, Quality factors, Embedding schemes, and payload. You can still use the pre-trained models provided for download.
+A new Alaska competition is now running on [Kaggle](https://www.kaggle.com/c/alaska2-image-steganalysis/overview), note that the settings are very different from the first edition of the competition: Image sizes, Quality factors, Embedding schemes, and Payload. You can still use the pre-trained models provided for download.
+We have open-sourced our solution on [this repo](https://github.com/BloodAxe/Kaggle-2020-Alaska2).
 
 ## Features
 
