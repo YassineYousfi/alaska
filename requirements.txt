@@ -5,6 +5,6 @@ requests
 # Used for handling zip files
 zipfile
 # tensorflow GPU
-tensorflow-gpu==1.14.0
+tensorflow-gpu==2.9.3
 # ONNX
 tf2onnx==1.5.3
